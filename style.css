@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+nav {
+  padding: 1rem;
+  background-image: linear-gradient(45deg, purple, indigo);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .container ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+#sign-up {
+  height: auto;
+  width: 400px;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+  margin-top: 5rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: tomato;
+  font-size: 2rem;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+}
+.form-group {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  height: 2.5rem;
+  outline: none;
+  font-size: 1.2rem;
+  border: 1px solid #999;
+  border-radius: 7px;
+  padding: 0 10px;
+}
+
+.action {
+  text-align: center;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  border: none;
+  background: tomato;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.error {
+  color: red;
+}
+
+.mandatory::before {
+  content: "*";
+  color: red;
+  margin-right: 5px;
+}
+
+
+.msg-display {
+  position: fixed;
+  top: 10%;
+  right: 2%;
+  width: 300px;
+  height: 70px;
+
+  display: flex;
+  padding-left:2rem;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  animation: fade-up 0.5s ease forwards;
+}
+
+.error-msg{
+    background-color: red;
+}
+
+.success-msg{
+    background-color: green;  
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    top: 20%;
+  }
+  100% {
+    opacity: 0.7;
+    top: 10%;
+  }
+}
